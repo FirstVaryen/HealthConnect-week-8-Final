@@ -1,0 +1,7 @@
+model,cv_roc_auc_mean,cv_roc_auc_std
+A raw only,0.6719,0.013
+B raw + flag46,0.6719,0.0129
+C raw + flag31,0.6717,0.0129
+D raw + interaction,0.6717,0.0129
+E raw + interaction + flag46,0.6717,0.0129
+F raw + interaction + flag31,0.6718,0.0126

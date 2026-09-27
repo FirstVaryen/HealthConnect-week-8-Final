@@ -1,0 +1,10 @@
+﻿f46: n=123 (2.46% of bookings), no-show rate 82.1%
+f31: n=233 (4.66% of bookings), no-show rate 73.0%
+A raw only                     AUC 0.6719 +/- 0.0130
+B raw + flag46                 AUC 0.6719 +/- 0.0129
+C raw + flag31                 AUC 0.6717 +/- 0.0129
+D raw + interaction            AUC 0.6717 +/- 0.0129
+E raw + interaction + flag46   AUC 0.6717 +/- 0.0129
+F raw + interaction + flag31   AUC 0.6718 +/- 0.0126
+paired diff [C raw + flag31] minus [B raw + flag46]: -0.0001 (sd 0.0006, wins 10/25 folds)
+paired diff [F raw + interaction + flag31] minus [E raw + interaction + flag46]: +0.0000 (sd 0.0009, wins 16/25 folds)

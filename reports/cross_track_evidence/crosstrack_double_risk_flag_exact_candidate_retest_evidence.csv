@@ -1,0 +1,4 @@
+variant,n_features,week6_protocol_auc_mean,week6_protocol_auc_std,repeated_cv_auc_mean,repeated_cv_auc_std
+flag46 (Week 6 as built),12,0.6819,0.012,0.6814,0.015
+flag31 (DA finding),12,0.6821,0.012,0.6815,0.0149
+no flag,11,0.682,0.012,0.6816,0.0151

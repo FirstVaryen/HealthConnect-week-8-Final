@@ -1,0 +1,3 @@
+definition,lead_time_threshold_days,segment_pct_of_bookings,segment_no_show_rate_pct,cv_roc_auc_mean,cv_roc_auc_std,double_risk_flag_importance
+"Original (as coded, train_improved.py)",>=46,2.46,82.1,0.6661,0.006,0.0223
+Corrected (DA-validated),>=31,4.66,73.0,0.6662,0.0056,0.0219
