@@ -1,0 +1,7 @@
+# HealthConnect Week 8 - Data Analytics track (developed on Python 3.14)
+# pandas / numpy / jupyterlab match the Week 5 environment.
+# scikit-learn version was not recorded; any recent release works.
+scikit-learn>=1.5
+pandas==3.0.5
+numpy==2.5.2
+jupyterlab==4.6.3

@@ -32,10 +32,28 @@
 Any Python 3 environment with `pandas`, `numpy` and `scikit-learn` works (developed on Python 3.14).
 
 ```bash
-pip install pandas numpy scikit-learn jupyter
+pip install -r requirements.txt
 cd notebooks
 jupyter notebook
 ```
+
+The standalone checks in `scripts/` (carried from Week 7) run the same way:
+
+```bash
+cd scripts
+python week7_kpi5_and_distance_checks.py
+python week7_double_risk_lr_test.py
+python week7_double_risk_exact_candidate_test.py
+```
+
+`week7_double_risk_exact_candidate_test.py` also needs the Week 6 Data Science track project, which is not in this repo. Point the script at it before running:
+
+```bash
+set HEALTHCONNECT_DS_TRACK=C:\path\to\week 6 - data science track      # Windows
+export HEALTHCONNECT_DS_TRACK="/path/to/week 6 - data science track"     # macOS/Linux
+```
+
+Its saved output is in `reports/cross_track_evidence/double_risk_exact_candidate_test_output.txt`, so the result can be checked without re-running it.
 
 ---
 
@@ -55,3 +73,7 @@ jupyter notebook
 - Individual 5-10 minute video presentation required.
 
 See `reports/HealthConnect_Week8_Final_Analytics_Report.pdf` for the full write-up.
+
+## Repository maintenance
+
+**14 Nov 2026:** Added `requirements.txt`. `scripts/week7_double_risk_exact_candidate_test.py` no longer has a hard-coded path to one PC; it reads the `HEALTHCONNECT_DS_TRACK` setting and explains what to do if the Week 6 project is missing. The analysis, outputs and findings are unchanged.

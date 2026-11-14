@@ -10,6 +10,7 @@ build_model_frame), so the features cannot drift from the real candidate.
 Only the double_risk_flag lead-time threshold is changed: 46 (as built in
 Week 6) versus 31 (the value that reproduces the DA finding).
 """
+import os
 import sys
 from pathlib import Path
 
@@ -20,7 +21,12 @@ from sklearn.model_selection import RepeatedStratifiedKFold, StratifiedKFold, cr
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-DS = Path(r"C:\Users\hilla\OneDrive\Desktop\AnalystLab\week 6 - data science track")
+# Folder of the Week 6 Data Science track project (not included in this repo).
+# Set HEALTHCONNECT_DS_TRACK to its location; otherwise a sibling folder is assumed.
+DS = Path(os.environ.get("HEALTHCONNECT_DS_TRACK", Path(__file__).resolve().parents[2] / "week 6 - data science track"))
+if not (DS / "scripts" / "prep_features.py").exists():
+    sys.exit(f"Week 6 Data Science track not found at: {DS}" + chr(10)
+             + "Set the HEALTHCONNECT_DS_TRACK environment variable to that folder and run again.")
 sys.path.insert(0, str(DS / "scripts"))
 from prep_features import build_model_frame, load_raw  # noqa: E402
 from robustness_check import build_restricted_features  # noqa: E402
